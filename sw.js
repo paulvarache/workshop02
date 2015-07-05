@@ -1,11 +1,11 @@
 var CACHE_NAME = 'platypus-cache-v1';
 var urlsToCache = [
-    '/',
-    '/style.css',
-    '/app.js',
-    '/img/icons/add.svg',
-    '/img/icons/delete.svg',
-    '/img/icons/navigate_before.svg'
+    '/workshop02/',
+    '/workshop02/style.css',
+    '/workshop02/app.js',
+    '/workshop02/img/icons/add.svg',
+    '/workshop02/img/icons/delete.svg',
+    '/workshop02/img/icons/navigate_before.svg'
 ];
 
 self.addEventListener('install', function (event) {
