@@ -18,7 +18,6 @@
       "type": "image/png"
     }
   ],
-  "start_url": "/workshop02/index.html",
   "display": "fullscreen",
   "orientation": "portrait"
 }
