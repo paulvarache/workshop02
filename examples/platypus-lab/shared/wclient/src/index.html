@@ -3,11 +3,11 @@
     <head>
         <title>Platypus Lab</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- build:css /style.css -->
+        <!-- build:css style.css -->
         <link rel="stylesheet" type="text/css" href="vendor/angular-material/angular-material.min.css">
-        <link rel="stylesheet" type="text/css" href="/css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
         <!-- /build -->
-        <link rel="manifest" href="/manifest.json">
+        <link rel="manifest" href="manifest.json">
     </head>
     <body>
         <div ng-app="PlatypusLab" layout="column" layout-fill ng-controller="LayoutController" class="page">
@@ -43,7 +43,9 @@
 
         <script type="text/javascript">
         if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('/sw.js').then(function (registration) {
+            navigator.serviceWorker.register('./sw.js', {
+                scope: '/workshop02/'
+            }).then(function (registration) {
                 console.log('Service worker registered with scope: ', registration.scope);
             }).catch(function (err) {
                 console.log('ServiceWorker registration failed: ', err);

@@ -4,61 +4,61 @@ angular.module('PlatypusLab')
         var list = [{
                             _id: '1',
                             name: 'Perry',
-                            picture: '/img/pictures/perry.jpg',
+                            picture: 'img/pictures/perry.jpg',
                             info: 'Agent P.'
                         },
                         {
                             _id: '2',
                             name: 'Noah',
-                            picture: '/img/pictures/noah.jpg',
+                            picture: 'img/pictures/noah.jpg',
                             info: 'PlatyArk'
                         },
                         {
                             _id: '3',
                             name: 'Lindsay',
-                            picture: '/img/pictures/lindsay.jpg',
+                            picture: 'img/pictures/lindsay.jpg',
                             info: 'PlatyGirl'
                         },
                         {
                             _id: '4',
                             name: 'Robert',
-                            picture: '/img/pictures/robert.jpg',
+                            picture: 'img/pictures/robert.jpg',
                             info: 'PlatyBaratheon'
                         },
                         {
                             _id: '5',
                             name: 'Spencer',
-                            picture: '/img/pictures/spencer.jpg',
+                            picture: 'img/pictures/spencer.jpg',
                             info: 'PlatyMark'
                         },
                         {
                             _id: '6',
                             name: 'Billy',
-                            picture: '/img/pictures/billy.jpg',
+                            picture: 'img/pictures/billy.jpg',
                             info: 'PlatyTheKid'
                         },
                         {
                             _id: '7',
                             name: 'Harry',
-                            picture: '/img/pictures/harry.jpg',
+                            picture: 'img/pictures/harry.jpg',
                             info: 'PlatyPotter'
                         },
                         {
                             _id: '8',
                             name: 'Bobby',
-                            picture: '/img/pictures/bobby.jpg',
+                            picture: 'img/pictures/bobby.jpg',
                             info: 'PlatyJerk'
                         },
                         {
                             _id: '9',
                             name: 'Sono',
-                            picture: '/img/pictures/sono.jpg',
+                            picture: 'img/pictures/sono.jpg',
                             info: 'Platy'
                         },
                         {
                             _id: '10',
                             name: 'Beakbird',
-                            picture: '/img/pictures/beakbird.jpg',
+                            picture: 'img/pictures/beakbird.jpg',
                             info: 'Platypus'
                         }];
         $httpBackend
@@ -102,5 +102,5 @@ angular.module('PlatypusLab')
             });
 
         $httpBackend.whenGET(/^templates\/.*/).passThrough();
-        $httpBackend.whenGET(/^\/img\/.*/).passThrough();
+        $httpBackend.whenGET(/^\img\/.*/).passThrough();
     }]);
