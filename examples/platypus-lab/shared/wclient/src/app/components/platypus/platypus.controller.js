@@ -88,5 +88,5 @@ angular.module('PlatypusLab.platypus')
     $scope.platypus = platypus;
     $scope.$on('$destroy', function () {
         $rootScope.color.dominant = [63, 81, 181];
-    })
+    });
 }]);

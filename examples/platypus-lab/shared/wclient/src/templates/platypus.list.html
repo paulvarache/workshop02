@@ -11,7 +11,7 @@
     <md-list>
         <md-list-item class="md-2-line"
                         ng-repeat="platypus in platypuses track by $index">
-            <img ng-src="{{platypus.picture}}?{{$index}}"
+            <img ng-src="{{platypus.picture}}"
                     class="md-avatar"
                     ng-class="{'selected': platypus.selected}"
                     ng-right-click="select(platypus)">
