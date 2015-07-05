@@ -1,0 +1,28 @@
+<md-toolbar style="background-color: {{ color.dominant | rgbArray }}">
+    <div class="md-toolbar-tools">
+        <h2><span>Platypus Lab</span></h2>
+        <span flex></span>
+        <md-button class="md-icon-button" ng-if="editing.length" ng-click="delete()" aria-label="Delete">
+            <md-icon md-svg-src="/img/icons/delete.svg"></md-icon>
+        </md-button>
+    </div>
+</md-toolbar>
+<md-content flex layout="column">
+    <md-list>
+        <md-list-item class="md-2-line"
+                        ng-repeat="platypus in platypuses track by $index">
+            <img ng-src="{{platypus.picture}}?{{$index}}"
+                    class="md-avatar"
+                    ng-class="{'selected': platypus.selected}"
+                    ng-right-click="select(platypus)">
+            <div class="md-list-item-text" ng-click="goToPlatypus(platypus._id)">
+                <h3>{{platypus.name}}</h3>
+                <p>{{platypus.info}}</p>
+            </div>
+        </md-list-item>
+    </md-list>
+
+    <md-button aria-label="add" class="md-fab md-warn" ng-class="'add-button'" ng-click="add($event)">
+        <md-icon md-svg-src="/img/icons/add.svg"></md-icon>
+    </md-button>
+</md-content>

@@ -1,0 +1,19 @@
+<md-toolbar style="background-color: {{ color.dominant | rgbArray }}">
+    <div class="md-toolbar-tools">
+        <md-button class="md-icon-button" aria-label="Back" ng-href="#/">
+            <md-icon md-svg-src="/img/icons/navigate_before.svg"></md-icon>
+        </md-button>
+        <h2><span>{{platypus.name}}</span></h2>
+        <span flex></span>
+    </div>
+</md-toolbar>
+<md-content flex layout="column">
+    <div layout="column">
+        <img src="{{platypus.picture}}" style="width: 100%" cross-origin color-thief color-thief-dominant="color.dominant">
+        <md-content layout="column" layout-padding="5px">
+            <h3>{{platypus.name}}</h3>
+            <md-divider></md-divider>
+            <p>{{platypus.info}}</p>
+        </md-content>
+    </div>
+</md-content>
