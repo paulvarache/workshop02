@@ -6,6 +6,7 @@ var urlsToCache = [
     '/workshop02/img/icons/add.svg',
     '/workshop02/img/icons/delete.svg',
     '/workshop02/img/icons/navigate_before.svg'
+    '/workshop02/img/icons/clear.svg'
 ];
 
 self.addEventListener('install', function (event) {
