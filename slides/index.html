@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Workshop #02: REST in peace</title>
+
+		<meta name="author" content="Paul Varache">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/bttf.css">
+		<link rel="stylesheet" href="css/theme/sky.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal" id="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section class="negative lefted" data-background="img/background.jpg">
+					<h3>Workshop #02:</h3>
+					<h3>REST in peace</h3>
+				</section>
+
+				<section>
+					<div class="layout horizontal centered">
+						<img src="img/profile.jpg" style="height: 100px; border-radius: 50%; border: 3px solid black; margin-right: 15px">
+						<div style="text-align: left">
+							<div>Paul Varache</div>
+							<div style="font-size: 24px">Ysance</div>
+							<div><small>github.com/paulvarache</small></div>
+						</div>
+						<div class="layout vertical flex">
+							<div>GhettoBlaster</div>
+							<div>NodeGPIO</div>
+							<div>PITimelapse</div>
+							<div>MusicButler</div>
+							<div>PokerPlanning</div>
+							<div>DMP</div>
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<h2>REST</h2>
+					<ul>
+						<li class="fragment">Origines</li>
+						<li class="fragment">Concept originel</li>
+						<li class="fragment">Utilisation contemporaine</li>
+					</ul>
+				</section>
+
+				<section data-background-image="img/timetravel.gif" class="negative">
+					<h3>Les origines</h3>
+				</section>
+
+				<section>
+					<h3>Avant le 'web'</h3>
+				</section>
+
+				<section data-background-image="img/berners-lee.jpg" class="lefted">
+					<h3>Tim Berners Lee</h3>
+					<aside class="notes">
+						Born in 1955
+						Studied Physics at Oxford university
+						Built his first computer with a microprosesor and a television
+						1980 => CERN
+					</aside>
+				</section>
+
+				<section>
+					<h4>Information Management: A Proposal</h4>
+					<img class="fragment" src="img/proposal.gif" width="800">
+					<aside class="notes">
+						This anotaion is the starting point of the web because it gave TBL the authorization to work on this experimentaly
+					</aside>
+				</section>
+
+				<section>
+					<h4>Fin 1990</h4>
+					<small>Avec l'aide de Robert Cailliau</small>
+					<p class="fragment">URL (Uniform Resource Locator)</p>
+					<p class="fragment">HTTP (HyperText Transfert Protocol)</p>
+					<p class="fragment">HTML (HyperText Markup Language)</p>
+					<p class="fragment">Premier serveur web (httpd)</p>
+					<p class="fragment">Premier navigateur/editeur HTML (WorldWideWeb.app)</p>
+					<aside class="notes">
+						Rejoins par Rober Cailliau (Belge)
+						All of this was made on a NeXT computer => UNIX
+						Gros avantage => utilise le réseau déja présent sans rien y changer
+						Probleme => uniquement compatible NEXTSTEP => peu de publique visé
+						Navigateur en ligne de commande.
+					</aside>
+				</section>
+
+				<section>
+					<h4>Printemps 1991</h4>
+					<p class="fragment">WorldWideWeb.app mis en libre accès sur Internet</p>
+					<aside class="notes">
+						Appel à une aide extérieure => Dévelopment des premiers navigateurs sur X Windows System
+					</aside>
+				</section>
+
+				<section>
+					<h4>1993</h4>
+					<p class="fragment">Dévelopement de NCSA Mosaic (Natinal Center for Superconmputing Applications)</p>
+					<p class="fragment">Arrivée des versions PC et Macintosh</p>
+					<aside class="notes">
+						Commence à pénetrer le monde scientifique
+					</aside>
+				</section>
+
+				<section>
+					<h4>1994</h4>
+					<p class="fragment">Première conférence internationale WWW</p>
+					<p class="fragment">TBL fonde le W3C (World Wide Web Consortium)</p>
+					<p class="fragment">TBL quitte le CERN pour le MIT</p>
+					<aside class="notes">
+						Organisé par Rober Cailliau
+						TBL désigné membre du Hall of Fame des fondateurs du WWW
+					</aside>
+				</section>
+
+				<section>
+					<img src="img/internet.gif" width="800">
+				</section>
+
+				<section>
+					<h4>juillet 2004</h4>
+					<p class="fragment">TBL est anobli par la reine Élisabeth II</p>
+					<aside>
+						30 Titres et décorations
+						Le dernier: 1er Queen Elizabeth Prize for Engineering le 18 mars 2013
+					</aside>
+				</section>
+
+				<section data-background-image="img/sir.jpg" class="negative" style="text-align: right; padding-top: 400px">
+					<h2 class="fragment" style="background-color: black; display: inline">Sir Timothy John Berners-Lee</h2>
+				</section>
+
+				<section>
+					<div class="layout vertical">
+						<h3>Liens utiles</h3>
+						<a target="_blank" href="https://www.youtube.com/watch?v=8aGhZQkoFbQ">Philip Roberts: What the heck is the event loop anyway? | JSConf EU 2014</a>
+						<a target="_blank" href="https://www.youtube.com/watch?v=jo_B4LTHi3I">Introduction to Node.js with Ryan Dahl</a>
+					</div>
+				</section>
+
+				<section class="negative lefted" data-background="img/background.jpg">
+					<h2>Merci</h2>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+		<script src="js/timeline.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+			var tls = {
+				'4': {
+					id: 4,
+					points: [{
+						content: '<div>1970</div><div>epoch time</div>',
+						position: 50
+					}]
+				},
+				'6': {
+					id: 6,
+					points: [{
+						content: 'mars 1989<br><small>Information Management:<br>A Proposal</small>',
+						position: 1
+					}]
+				},
+				'7': {
+					id: 7,
+					points: [{
+						content: 'mars 1989<br><small>Information Management:<br>A Proposal</small>',
+						position: 1
+					},
+					{
+						content: 'decembre 1990<br><small>URL, HTTP, HTML, httpd...</small>',
+						position: 18
+					}]
+				},
+				'8': {
+					id: 8,
+					points: [{
+						content: 'mars 1989<br><small>Information Management:<br>A Proposal</small>',
+						position: 1
+					},
+					{
+						content: 'decembre 1990<br><small>URL, HTTP, HTML, httpd...</small>',
+						position: 18
+					},
+					{
+						content: 'printemps 1991<br><small>Accès libre</small>',
+						position: 35
+					}]
+				},
+				'9': {
+					id: 9,
+					points: [{
+						content: 'mars 1989<br><small>Information Management:<br>A Proposal</small>',
+						position: 1
+					},
+					{
+						content: 'decembre 1990<br><small>URL, HTTP, HTML, httpd...</small>',
+						position: 18
+					},
+					{
+						content: 'printemps 1991<br><small>Accès libre</small>',
+						position: 35
+					},
+					{
+						content: '1993<br><small>NCSA Mosaic</small>',
+						position: 50
+					}]
+				},
+				'10': {
+					id: 10,
+					points: [{
+						content: 'mars 1989<br><small>Information Management:<br>A Proposal</small>',
+						position: 1
+					},
+					{
+						content: 'decembre 1990<br><small>URL, HTTP, HTML, httpd...</small>',
+						position: 18
+					},
+					{
+						content: 'printemps 1991<br><small>Accès libre</small>',
+						position: 35
+					},
+					{
+						content: '1993<br><small>NCSA Mosaic</small>',
+						position: 50
+					},
+					{
+						content: '1994<br><small>W3C</small>',
+						position: 60
+					}]
+				}
+			};
+
+			var currentTl = null;
+
+			Reveal.addEventListener('slidechanged', function (event) {
+				if (currentTl) {
+					currentTl.parentNode.removeChild(currentTl);
+					currentTl = null;
+				}
+				if (tls[Reveal.getState().indexh]) {
+					currentTl = Timeline(tls[Reveal.getState().indexh]);
+				}
+			});
+
+			function padDigits(number, digits) {
+			    return Array(Math.max(digits - String(number).length + 1, 0)).join(0) + number;
+			}
+
+			var hour = document.querySelector('#presentTime .hour'),
+				min = document.querySelector('#presentTime .min');
+
+			var d = new Date();
+
+			if (hour && min) {
+				hour.innerText = padDigits(d.getHours() % 12 || 12, 2);
+				min.innerText = padDigits(d.getMinutes(), 2);
+			}
+
+		</script>
+
+	</body>
+</html>
