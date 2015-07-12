@@ -229,6 +229,98 @@
 					</aside>
 				</section>
 
+				<section style="text-align: right">
+					<div class="layout horizontal">
+						<div class="layout vertical flex">
+							<h3>Roy Fielding</h3>
+							<p class="fragment">Participe au developement des premiers serveurs web</p>
+							<p class="fragment">Un des principaux auteurs de la spécification HTTP</p>
+							<p class="fragment">Membre fondateur d'Apache</p>
+						</div>
+						<div><img src="img/roy.jpg" width="400"></div>
+					</div>
+					<aside class="notes">
+						Developé libwww-perl
+					</aside>
+				</section>
+
+				<section>
+					<h4>2000</h4>
+					<p>Architectural Styles and the Design of Network-based Software Architectures</p>
+					<img class="fragment" src="img/thanksTim.png">
+					<aside class="notes">
+						Dissertation de doctorat
+					</aside>
+				</section>
+
+				<section>
+					<h2>Contraintes</h2>
+				</section>
+
+				<section>
+					<h3>Client-Server</h3>
+					<small>Séparer les préoccupations UI des préoccupations du stockage de données</small>
+					<p class="fragment">Améliore la portabilité de l'UI sur toutes les plateformes</p>
+					<p class="fragment">Améliore la scalabilité en simplifiant le composant serveur</p>
+				</section>
+
+				<section>
+					<h3>Stateless</h3>
+					<small>Chaque requête du client doit contenir toutes les informations nécessaires pour la comprendre</small>
+					<p class="fragment">+ Visibilité: Monitoring</p>
+					<p class="fragment">+ Fiabilité: Récupération sur echecs</p>
+					<p class="fragment">+ Scalabilité: Pas de session</p>
+					<p class="fragment">- Requête plus lourdes</p>
+					<p class="fragment">- Session côté client</p>
+				</section>
+
+				<section>
+					<h3>Cache</h3>
+					<small>Une résponse doit indiquer si la resource est cacheable ou non</small>
+					<p class="fragment">+ Supprime des interactions et améliore l'UX</p>
+					<p class="fragment">- Fiabilité: Risque de données non-consitantes</p>
+				</section>
+
+				<section>
+					<h3>Uniform Interface</h3>
+					<small>Uniformiser les interfaces entre les composants</small>
+					<p class="fragment">+ Architecture simplifiée</p>
+					<p class="fragment">+ Meilleure visibilité des interactions</p>
+					<p class="fragment">- Standardisation</p>
+				</section>
+
+				<section>
+					<h3>Layered System</h3>
+					<small>Permet d'avoir une architecture composée de couches hiérachiques</small>
+					<p class="fragment">+ Un composant ne peut pas voir au delà de la couche avec laquelle il intéragit</p>
+					<p class="fragment">+ Load balancing</p>
+					<p class="fragment">- Latence</p>
+				</section>
+
+				<section>
+					<h2>La donnée</h2>
+				</section>
+
+				<section>
+					<p class="fragment">Génerer l'UI sur le serveur</p>
+					<small class="fragment">Cache la structure de donnée</small><br>
+					<small class="fragment">Client plus simple</small>
+					<p class="fragment">Envoyer la donnée dans un moteur de rendu. e.g. object Java</p>
+					<small class="fragment">Cache la structure de donnée</small><br>
+					<small class="fragment">Plus d'options côté client</small><br>
+					<small class="fragment">Requêtes plus lourdes</small>
+					<p class="fragment">Envoyer la donnée brute et laisser le client s'en occuper</p>
+					<small class="fragment">Expose la structure de donnée</small><br>
+					<small class="fragment">Serveur plus simple</small>
+				</section>
+
+				<section>
+					<h3>Les resources</h3>
+					<small>Une représentation dans un format standardisé</small>
+					<p>Cache la structure de donnée derière une interface générique</p>
+					<p></p>
+				</section>
+
 				<section>
 					<img src="img/internet.gif" width="800">
 				</section>
