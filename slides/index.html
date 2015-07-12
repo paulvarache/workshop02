@@ -254,71 +254,168 @@
 				</section>
 
 				<section>
-					<h2>Contraintes</h2>
+					<div class="layout horizontal centered">
+						<h4 class="flex">Gothic Architecture</h4>
+						<div class="flex fragment">
+							<img src="img/gothic.jpg" alt="Gothic illustration" width="600"/>
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<div class="layout horizontal centered">
+						<h4 class="flex">REST Architecture</h4>
+						<h4 class="flex fragment">HTTP</h4>
+					</div>
+				</section>
+
+				<section>
+					<h2>Protocol</h2>
+					<ul>
+						<li class="fragment">Client-Server</li>
+						<li class="fragment">Stateless</li>
+						<li class="fragment">Cacheable</li>
+						<li class="fragment">Layered</li>
+					</ul>
 				</section>
 
 				<section>
 					<h3>Client-Server</h3>
 					<small>Séparer les préoccupations UI des préoccupations du stockage de données</small>
-					<p class="fragment">Améliore la portabilité de l'UI sur toutes les plateformes</p>
-					<p class="fragment">Améliore la scalabilité en simplifiant le composant serveur</p>
+					<ul>
+						<li class="fragment plus">Portabilité des UI</li>
+						<li class="fragment plus">Scalabilité</li>
+					</ul>
 				</section>
 
 				<section>
 					<h3>Stateless</h3>
 					<small>Chaque requête du client doit contenir toutes les informations nécessaires pour la comprendre</small>
-					<p class="fragment">+ Visibilité: Monitoring</p>
-					<p class="fragment">+ Fiabilité: Récupération sur echecs</p>
-					<p class="fragment">+ Scalabilité: Pas de session</p>
-					<p class="fragment">- Requête plus lourdes</p>
-					<p class="fragment">- Session côté client</p>
+					<ul>
+						<li class="fragment plus">Monitoring</li>
+						<li class="fragment plus">Récupération sur echecs</li>
+						<li class="fragment plus">Session côté client</li>
+						<li class="fragment minus">Requêtes plus lourdes</li>
+						<li class="fragment minus">Session côté client</li>
+					</ul>
 				</section>
 
 				<section>
-					<h3>Cache</h3>
+					<h3>Cacheable</h3>
 					<small>Une résponse doit indiquer si la resource est cacheable ou non</small>
-					<p class="fragment">+ Supprime des interactions et améliore l'UX</p>
-					<p class="fragment">- Fiabilité: Risque de données non-consitantes</p>
+					<ul>
+						<li class="fragment plus">Suppression d'interactions</li>
+						<li class="fragment minus">Risque de données non-consitantes</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Layered</h3>
+					<small>Permet d'avoir une architecture composée de couches hiérachiques</small>
+					<ul>
+						<li class="fragment plus">Un composant ne peut pas voir au delà de la couche avec laquelle il intéragit</li>
+						<li class="fragment plus">Load balancing</li>
+						<li class="fragment minus">Latence</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Resources</h2>
+					<ul>
+						<li class="fragment">URI</li>
+						<li class="fragment">Uniform Interface</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>URI</h3>
+					<small>Chaque resource doit être identifée avec un unique endpoint</small>
 				</section>
 
 				<section>
 					<h3>Uniform Interface</h3>
-					<small>Uniformiser les interfaces entre les composants</small>
-					<p class="fragment">+ Architecture simplifiée</p>
-					<p class="fragment">+ Meilleure visibilité des interactions</p>
-					<p class="fragment">- Standardisation</p>
+					<small>Uniformiser les interfaces entre les composants en utilisant des datatypes standardisés</small>
+					<ul>
+						<li class="fragment plus">Architecture simplifiée</li>
+						<li class="fragment plus">Meilleure visibilité des interactions</li>
+						<li class="fragment minus">Standardisation</li>
+					</ul>
 				</section>
 
 				<section>
-					<h3>Layered System</h3>
-					<small>Permet d'avoir une architecture composée de couches hiérachiques</small>
-					<p class="fragment">+ Un composant ne peut pas voir au delà de la couche avec laquelle il intéragit</p>
-					<p class="fragment">+ Load balancing</p>
-					<p class="fragment">- Latence</p>
+					<h3>HATEOAS</h3>
+					<small>Hypermedia as the Engine Application State</small>
+					<ul>
+						<li class="fragment plus">Séparation supplémentaire client/server</li>
+					</ul>
+					<aside class="notes">
+						Roy Fielding le décrit dans Uniform interface, puis détaillé dans son blog
+					</aside>
 				</section>
 
 				<section>
-					<h2>La donnée</h2>
+					<h3>HTTP est RESTful</h3>
 				</section>
 
 				<section>
-					<p class="fragment">Génerer l'UI sur le serveur</p>
-					<small class="fragment">Cache la structure de donnée</small><br>
-					<small class="fragment">Client plus simple</small>
-					<p class="fragment">Envoyer la donnée dans un moteur de rendu. e.g. object Java</p>
-					<small class="fragment">Cache la structure de donnée</small><br>
-					<small class="fragment">Plus d'options côté client</small><br>
-					<small class="fragment">Requêtes plus lourdes</small>
-					<p class="fragment">Envoyer la donnée brute et laisser le client s'en occuper</p>
-					<small class="fragment">Expose la structure de donnée</small><br>
-					<small class="fragment">Serveur plus simple</small>
+					<h4>HTTP request</h4>
+					<pre>
+GET <span class="fragment highlight-blue" data-fragment-index="1">/patate/</span> HTTP/1.1
+Host: <span class="fragment highlight-blue" data-fragment-index="1">legume.com</span>
+Accept-Encoding: compress, gzip
+User-Agent: Mozilla/5.0 (Windows NT 6.1) Appl...
+					</pre>
+					<aside class="notes">
+						Resource identifiée par une URI
+					</aside>
 				</section>
 
 				<section>
-					<h3>Les resources</h3>
-					<small>Une représentation dans un format standardisé</small>
-					<p>Cache la structure de donnée derière une interface générique</p>
-					<p></p>
+					<h4>HTTP response</h4>
+					<pre>
+HTTP/1.1 200 Ok
+Date: Wed, 15 Jul 2015 19:32:67 GMT
+Server: Apache
+Content-Type: <span class="fragment highlight-blue">text/html</span>
+Cache-Control: <span class="fragment highlight-blue">max-age=3600</span>
+
+<!DOCTYPE html>
+...
+					</pre>
+					<aside class="notes">
+						Une representation de la resource est retournée
+					</aside>
+				</section>
+
+				<section>
+					<h4>HTML respecte HATEOAS</h4>
+					<pre>
+						<code>
+<a href="/home/">Home</a>
+						</code>
+					</pre>
+					<pre class="fragment">
+						<code>
+<link href="/css/base.css" rel="stylesheet">
+						</code>
+					</pre>
+					<pre class="fragment">
+						<code>
+<script src="/scripts/app.js"></script>
+						</code>
+					</pre>
+					<aside class="notes">
+						Contient des URI vers d'autres resources
+					</aside>
+				</section>
+
+				<section style="text-align: left">
+					<h4>Verbs</h4>
+					<p class="fragment">GET - Safe, Idempotent, Cacheable</p>
+					<p class="fragment">PUT - Idempotent</p>
+					<p class="fragment">DELETE - Idempotent</p>
+					<p class="fragment">HEAD - Safe, Idempotent</p>
+					<p class="fragment">POST</p>
 				</section>
 
 				<section>

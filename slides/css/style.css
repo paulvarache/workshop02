@@ -106,3 +106,14 @@ section.full {
     font-family: Arial;
     text-align: center;
 }
+li.plus, li.minus {
+    list-style: none;
+}
+li.plus::before {
+    content: "+";
+    margin-right: 8px;
+}
+li.minus::before {
+    content: "-";
+    margin-right: 8px;
+}
