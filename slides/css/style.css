@@ -55,6 +55,9 @@
 .layout.justify-center {
     justify-content: center;
 }
+.layout.justify-end {
+    justify-content: end;
+}
 .border {
     margin: 15px !important;
     background: rgba(255, 255, 255, 0.12);
